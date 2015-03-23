@@ -51,7 +51,7 @@ Steps to create a sample application
      		postNotificationName:@"ApplicationEvent"
      		object:message];
 	    }
-
+	    
     c.	notify ScalaMobileSDK when application will enter foreground through NSNotificationCenter:
     
 	- (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -65,14 +65,14 @@ Steps to create a sample application
 	}
 		
     d.	notify application when application will terminate to clear web view content:
-
+    
 	- (void)applicationWillTerminate:(UIApplication *)application {
-    		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-   			[[NSURLCache sharedURLCache] removeAllCachedResponses];
-    		[[NSNotificationCenter defaultCenter]
-     			postNotificationName:@"ApplicationEvent"
-     			object:@"ApplicationWillTerminate"];
-		}
+    	    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+   	    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    	    [[NSNotificationCenter defaultCenter]
+     		postNotificationName:@"ApplicationEvent"
+     		object:@"ApplicationWillTerminate"];
+	}
 
 4.	code in ViewController.m file:
 
@@ -161,6 +161,7 @@ Steps to create a sample application
 	-(void) didGetInternetConnection
 	-(void) didLoseInternetConnection
 		
+    
      h.	refer to javascript SDK document for the usage of javascript functions (javascript hooks) to communicate with IOS native code.
     			
     			
