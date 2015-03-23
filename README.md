@@ -24,7 +24,7 @@ Steps to create a sample application
 	UIKit.framework
 	CoreGraphics.framework
 
-3.	in project file, go to "Build Settings" -> "Linking" -> "Other Linker Flags", add entry of "-ObjC"
+3.  in project file, go to "Build Settings" -> "Linking" -> "Other Linker Flags", add entry of "-ObjC"
 
 4.  codes in AppDelegate.m file:
     a.  need to registerForRemoteNotifications at 
@@ -33,33 +33,35 @@ Steps to create a sample application
           [application registerForRemoteNotifications];
           ......
         }
+    
     b.  get the deviceToken and send it to ScalaMobileSDK through NSNotificationCenter:
     	- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
-    		DLog(@"My token is: %@", deviceToken);
-    		NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
-    		token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    	    DLog(@"My token is: %@", deviceToken);
+    	    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    	    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     
-    		[[NSUserDefaults standardUserDefaults]setValue:token forKey:@"devicetoken"];
-    		[[NSUserDefaults standardUserDefaults]synchronize];
+    	    [[NSUserDefaults standardUserDefaults]setValue:token forKey:@"devicetoken"];
+    	    [[NSUserDefaults standardUserDefaults]synchronize];
     
-    		NSString * message = [NSString stringWithFormat:@"%@%@", @"getDeviceToken:", token];
-    		[[NSNotificationCenter defaultCenter]
-     			postNotificationName:@"ApplicationEvent"
-     			object:message];
-		}
-	c.	notify ScalaMobileSDK when application will enter foreground through NSNotificationCenter:
-		- (void)applicationWillEnterForeground:(UIApplication *)application {
-    		// ask ScalaMobileSDK to check cache, rebuild data has been changed.
-    		if(_recheckCache) {
-        		[[NSNotificationCenter defaultCenter]
-         			postNotificationName:@"ApplicationEvent"
-         			object:@"recheckCache"];
-    		}
+    	    NSString * message = [NSString stringWithFormat:@"%@%@", @"getDeviceToken:", token];
+    	    [[NSNotificationCenter defaultCenter]
+     		postNotificationName:@"ApplicationEvent"
+     		object:message];
+	    }
+
+    c.	notify ScalaMobileSDK when application will enter foreground through NSNotificationCenter:
+	- (void)applicationWillEnterForeground:(UIApplication *)application {
+    	    // ask ScalaMobileSDK to check cache, rebuild data has been changed.
+    	    if(_recheckCache) {
+        	[[NSNotificationCenter defaultCenter]
+         	    postNotificationName:@"ApplicationEvent"
+         	    object:@"recheckCache"];
+    	    }
     		......
-		}
+	}
 		
-	d.	notify application when application will terminate to clear web view content:
-		- (void)applicationWillTerminate:(UIApplication *)application {
+    d.	notify application when application will terminate to clear web view content:
+	- (void)applicationWillTerminate:(UIApplication *)application {
     		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
    			[[NSURLCache sharedURLCache] removeAllCachedResponses];
     		[[NSNotificationCenter defaultCenter]
@@ -145,10 +147,10 @@ Steps to create a sample application
     	-(void) didGetApplicationChangePusherEvent:(NSDictionary*)pusherData
     	-(void) didGetRefreshCacheRequest
     	-(void) didGetNewClosestBeacon:(NSString*) returnString withType:(NSString*) type
-		-(void) didGetInternetConnection
-		-(void) didLoseInternetConnection
+	-(void) didGetInternetConnection
+	-(void) didLoseInternetConnection
 		
-	h.	refer to javascript SDK document for the usage of javascript functions (javascript hooks) to communicate with IOS native code.
+     h.	refer to javascript SDK document for the usage of javascript functions (javascript hooks) to communicate with IOS native code.
     			
     			
     			
