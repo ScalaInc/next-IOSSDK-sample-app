@@ -29,6 +29,7 @@ Steps to create a sample application
 4.  codes in AppDelegate.m file:
 
     a.  need to registerForRemoteNotifications at 
+    
         - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
           ......
           [application registerForRemoteNotifications];
@@ -36,6 +37,7 @@ Steps to create a sample application
         }
     
     b.  get the deviceToken and send it to ScalaMobileSDK through NSNotificationCenter:
+    
     	- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken {
     	    DLog(@"My token is: %@", deviceToken);
     	    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
@@ -51,6 +53,7 @@ Steps to create a sample application
 	    }
 
     c.	notify ScalaMobileSDK when application will enter foreground through NSNotificationCenter:
+    
 	- (void)applicationWillEnterForeground:(UIApplication *)application {
     	    // ask ScalaMobileSDK to check cache, rebuild data has been changed.
     	    if(_recheckCache) {
@@ -62,6 +65,7 @@ Steps to create a sample application
 	}
 		
     d.	notify application when application will terminate to clear web view content:
+
 	- (void)applicationWillTerminate:(UIApplication *)application {
     		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
    			[[NSURLCache sharedURLCache] removeAllCachedResponses];
@@ -71,6 +75,7 @@ Steps to create a sample application
 		}
 
 4.	code in ViewController.m file:
+
 	a.	initialize ScalaMobileSDK, and load web view
 		- (void)viewDidLoad {
 			....
@@ -80,8 +85,8 @@ Steps to create a sample application
     		[self loadWebView];
 		}
 		
-	b.	switch device screen between image view and web view depending on the internet connectivity, and the function call from javascript application.
-		if the application URL is sort of "initializer", always load application URL.
+	b.	switch device screen between image view and web view depending on the internet connectivity, and the function call from javascript application. if the application URL is sort of "initializer", always load application URL.
+
 		-(void) loadWebView {
 			......
 			if([fullURL rangeOfString:@"initializer"].location != NSNotFound){
