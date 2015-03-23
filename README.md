@@ -74,7 +74,7 @@ Steps to create a sample application
      		object:@"ApplicationWillTerminate"];
 	}
 
-4.	code in ViewController.m file:
+5.    code in ViewController.m file:
 
 	a.	initialize ScalaMobileSDK, and load web view
 	
