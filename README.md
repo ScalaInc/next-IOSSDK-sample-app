@@ -27,6 +27,7 @@ Steps to create a sample application
 3.  in project file, go to "Build Settings" -> "Linking" -> "Other Linker Flags", add entry of "-ObjC"
 
 4.  codes in AppDelegate.m file:
+
     a.  need to registerForRemoteNotifications at 
         - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
           ......
