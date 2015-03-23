@@ -157,9 +157,10 @@ Steps to create a sample application
     	-(void) didGetNodeChangePusherEvent:(NSDictionary*)pusherData
     	-(void) didGetApplicationChangePusherEvent:(NSDictionary*)pusherData
     	-(void) didGetRefreshCacheRequest
-    	-(void) didGetNewClosestBeacon:(NSString*) returnString withType:(NSString*) type
-	-(void) didGetInternetConnection
-	-(void) didLoseInternetConnection
+    	-(void) didGetInternetConnection	
+    	-(void) didLoseInternetConnection
+    	-(void) didGetNewClosestBeacon:(NSString*) returnString withType:(NSString*) type	
+    	
 		
     
      h.	refer to javascript SDK document for the usage of javascript functions (javascript hooks) to communicate with IOS native code.
