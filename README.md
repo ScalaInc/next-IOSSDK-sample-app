@@ -77,6 +77,7 @@ Steps to create a sample application
 4.	code in ViewController.m file:
 
 	a.	initialize ScalaMobileSDK, and load web view
+	
 		- (void)viewDidLoad {
 			....
 			scala = [[ScalaMobileSDK alloc] init];
@@ -98,6 +99,7 @@ Steps to create a sample application
 		}
 	
 	c.	retrieve javascript fucntion call
+	
 		-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     		......
     		if ([requestString hasPrefix:@"js-frame:"]) {
@@ -123,6 +125,7 @@ Steps to create a sample application
 		all javascript function will come starting with "js-frame:", navtive code will take the request string, and parse it with funciton name and arguments.
 		
 	e.	handle javascript function call
+	
 		- (void)handleCall:(NSString*)functionName callbackId:(int)callbackId args:(NSArray*)args {
     		if ([functionName isEqualToString:@"getBeacons"]) {
     			// return all beacon information including in-associated nodes.
@@ -142,12 +145,14 @@ Steps to create a sample application
 		after the result from ScalaMobileSDK, convert result to string, and return it to javascript through NativeBridge.call.
 		
 	f.	return results to javascript application
+
 		-(void)returnResultAfterDelay:(NSString*)str {
     		......
     	    [self.webView performSelectorOnMainThread:@selector(stringByEvaluatingJavaScriptFromString:) withObject:str waitUntilDone:NO];
 		}	
     
     g.	implement ScalaMobileSDKDelegate functions.
+    
     	-(void) didGetReturnResults:(NSString *)returnString forCallbackId:(int)callbackId 
     	-(void) didGetNodeChangePusherEvent:(NSDictionary*)pusherData
     	-(void) didGetApplicationChangePusherEvent:(NSDictionary*)pusherData
