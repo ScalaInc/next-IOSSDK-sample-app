@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScalaMobileSDK.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate, ScalaMobileSDKDelegate>{
+    ScalaMobileSDK *scala;
+}
 
-
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIImageView *frontView;
+@property (nonatomic, retain) NSString* major;
+@property (nonatomic, retain) NSString* minor;
 @end
 

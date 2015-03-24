@@ -62,4 +62,5 @@
 -(BOOL) isInsideRegion:(NSDictionary*) argumentNode;
 -(void) setUserInfo:(NSDictionary*) userInfo;
 -(void) takePicture:(NSDictionary*) argument forCallbackId:(int)callbackId;
++(BOOL) networkStatus;
 @end

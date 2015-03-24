@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,15 +20,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frontView.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-Z7-HOl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBZ-zd-N9i">
+                                <rect key="frame" x="-9" y="0.0" width="609" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CBZ-zd-N9i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-25" id="AS1-H0-Ecm"/>
                             <constraint firstItem="Awc-Z7-HOl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C9v-fy-EqE"/>
                             <constraint firstAttribute="trailing" secondItem="Awc-Z7-HOl" secondAttribute="trailing" id="dCB-Ss-6SO"/>
                             <constraint firstItem="Awc-Z7-HOl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dgl-Ym-9t3"/>
+                            <constraint firstItem="CBZ-zd-N9i" firstAttribute="trailing" secondItem="Awc-Z7-HOl" secondAttribute="trailing" id="lTd-cQ-o0m"/>
                             <constraint firstItem="Awc-Z7-HOl" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="seu-33-Q3b"/>
+                            <constraint firstItem="CBZ-zd-N9i" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="uH8-17-as7"/>
+                            <constraint firstItem="CBZ-zd-N9i" firstAttribute="top" secondItem="Awc-Z7-HOl" secondAttribute="top" id="v3T-UZ-0LJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="frontView" destination="Awc-Z7-HOl" id="LaJ-mE-Q7I"/>
+                        <outlet property="webView" destination="CBZ-zd-N9i" id="Gcp-Hr-Og8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

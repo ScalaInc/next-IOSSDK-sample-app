@@ -17,6 +17,14 @@
 		D307D87D1AC05CBE00D66168 /* libScalaMobileSDKIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D87C1AC05CBE00D66168 /* libScalaMobileSDKIOS.a */; };
 		D307D87F1AC05D3C00D66168 /* ApplicationProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = D307D87E1AC05D3C00D66168 /* ApplicationProperties.plist */; };
 		D307D8821AC0616200D66168 /* frontView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D307D8811AC0616200D66168 /* frontView.jpg */; };
+		D307D8891AC0A41A00D66168 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D8881AC0A41A00D66168 /* libiconv.dylib */; };
+		D307D88B1AC0A42300D66168 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D88A1AC0A42300D66168 /* AVFoundation.framework */; };
+		D307D88D1AC0A42D00D66168 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D88C1AC0A42C00D66168 /* QuartzCore.framework */; };
+		D307D88F1AC0A43400D66168 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D88E1AC0A43400D66168 /* CFNetwork.framework */; };
+		D307D8911AC0A43D00D66168 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D8901AC0A43D00D66168 /* libicucore.dylib */; };
+		D307D8971AC0A45800D66168 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D8961AC0A45800D66168 /* SystemConfiguration.framework */; };
+		D307D8991AC0A46000D66168 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D8981AC0A46000D66168 /* CoreLocation.framework */; };
+		D307D89B1AC0A46A00D66168 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307D89A1AC0A46A00D66168 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,20 @@
 		D307D87C1AC05CBE00D66168 /* libScalaMobileSDKIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libScalaMobileSDKIOS.a; sourceTree = "<group>"; };
 		D307D87E1AC05D3C00D66168 /* ApplicationProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApplicationProperties.plist; sourceTree = SOURCE_ROOT; };
 		D307D8811AC0616200D66168 /* frontView.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frontView.jpg; sourceTree = "<group>"; };
+		D307D8841AC08BE700D66168 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D307D8861AC08BF400D66168 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D307D8881AC0A41A00D66168 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		D307D88A1AC0A42300D66168 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D307D88C1AC0A42C00D66168 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D307D88E1AC0A43400D66168 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D307D8901AC0A43D00D66168 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		D307D8921AC0A44600D66168 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D307D8941AC0A44F00D66168 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		D307D8961AC0A45800D66168 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D307D8981AC0A46000D66168 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D307D89A1AC0A46A00D66168 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D307D89C1AC0A47300D66168 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D307D89E1AC0A47B00D66168 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +102,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D307D89B1AC0A46A00D66168 /* CoreBluetooth.framework in Frameworks */,
+				D307D8991AC0A46000D66168 /* CoreLocation.framework in Frameworks */,
+				D307D8971AC0A45800D66168 /* SystemConfiguration.framework in Frameworks */,
+				D307D8911AC0A43D00D66168 /* libicucore.dylib in Frameworks */,
+				D307D88F1AC0A43400D66168 /* CFNetwork.framework in Frameworks */,
+				D307D88D1AC0A42D00D66168 /* QuartzCore.framework in Frameworks */,
+				D307D88B1AC0A42300D66168 /* AVFoundation.framework in Frameworks */,
+				D307D8891AC0A41A00D66168 /* libiconv.dylib in Frameworks */,
 				D307D87D1AC05CBE00D66168 /* libScalaMobileSDKIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +127,20 @@
 		D307D8111AC053E500D66168 = {
 			isa = PBXGroup;
 			children = (
+				D307D89E1AC0A47B00D66168 /* UIKit.framework */,
+				D307D89C1AC0A47300D66168 /* Foundation.framework */,
+				D307D89A1AC0A46A00D66168 /* CoreBluetooth.framework */,
+				D307D8981AC0A46000D66168 /* CoreLocation.framework */,
+				D307D8961AC0A45800D66168 /* SystemConfiguration.framework */,
+				D307D8941AC0A44F00D66168 /* AdSupport.framework */,
+				D307D8921AC0A44600D66168 /* Security.framework */,
+				D307D8901AC0A43D00D66168 /* libicucore.dylib */,
+				D307D88E1AC0A43400D66168 /* CFNetwork.framework */,
+				D307D88C1AC0A42C00D66168 /* QuartzCore.framework */,
+				D307D88A1AC0A42300D66168 /* AVFoundation.framework */,
+				D307D8881AC0A41A00D66168 /* libiconv.dylib */,
+				D307D8861AC08BF400D66168 /* CoreVideo.framework */,
+				D307D8841AC08BE700D66168 /* CoreMedia.framework */,
 				D307D85F1AC05CBE00D66168 /* ScalaMobileSDK */,
 				D307D81C1AC053E500D66168 /* ScalaMobileSDK-Sample-App */,
 				D307D8361AC053E500D66168 /* ScalaMobileSDK-Sample-AppTests */,
@@ -445,7 +489,10 @@
 					"$(inherited)",
 					"/Users/wenyaohu/git/next-IOSSDK-sample-app/ScalaMobileSDK",
 				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -461,7 +508,9 @@
 					"$(inherited)",
 					"/Users/wenyaohu/git/next-IOSSDK-sample-app/ScalaMobileSDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
